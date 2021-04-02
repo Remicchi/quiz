@@ -1,0 +1,30 @@
+sql formatting
+
+questions
+questionNo question optionA optionB optionC optionD answer
+
+responses
+questionNo choice
+
+DROP TABLE IF EXISTS questions;
+CREATE TABLE questions(
+questionNo int,
+questions varchar(20),
+optionA varchar(10),
+optionB varchar(10),
+optionC varchar(10),
+optionD varchar(10),
+answer varchar(1)
+);
+
+insert into questions values (1 , 'What is life?' , 'Bruh' , 'Rule 34' , 'sad' , '42', 'D');
+
+
+DROP TABLE IF EXISTS responses;
+CREATE TABLE responses(
+questionNo int,
+choice varchar(1)
+);
+
+SELECT * FROM questions;
+SELECT * FROM responses;
