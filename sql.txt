@@ -9,7 +9,7 @@ questionNo choice
 DROP TABLE IF EXISTS questions;
 CREATE TABLE questions(
 questionNo int,
-questions varchar(20),
+question varchar(20),
 optionA varchar(10),
 optionB varchar(10),
 optionC varchar(10),
