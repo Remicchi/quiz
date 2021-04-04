@@ -54,6 +54,36 @@ out.println("<div id='mainContainer'>");
  
       out.println("</body></html>");
       out.close();
+
+      out.println("<!DOCTYPE HTML>");
+      out.println("<html>");
+      out.println("<head>");
+
+      out.println("window.onload = function () {");
+      out.println("var chart = new CanvasJS.Chart("chartContainer", {");
+      out.println("title:{");
+      out.println("data: [");              
+      out.println("{");
+         // Change type to "doughnut", "line", "splineArea", etc.
+      out.println('   type: "column",');
+      out.println('   dataPoints: [');
+      out.println('     { label: "apple",  y: 10  },');
+      out.println('      { label: "orange", y: 15  },');
+      out.println('      { label: "banana", y: 25  },');
+      out.println('     { label: "mango",  y: 30  },');
+      out.println('      { label: "grape",  y: 28  }');
+      out.println('   ]');
+      out.println('}');
+      out.println(']');
+      out.println('});');
+      out.println('chart.render();');
+      out.println('}');
+      out.println('</script>');
+      out.println('</head>');
+      out.println('<body>');
+      out.println('<div id="chartContainer" style="height: 300px; width: 100%;"></div>');
+      out.println('</body>');
+      out.println('</html>');
    }
 
    public void doPost (HttpServletRequest request, HttpServletResponse response)
